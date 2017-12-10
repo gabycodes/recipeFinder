@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Arima+Madurai|Forum|Limelight|Pompiere|Yeseva+One|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="landing">
+        <header>
+            <div class="title wrapper clearfix">
+                <img src="assets/logo.png" alt="">
+                <h1>DinnerDatePro</h1>
+                <p>No ideas for dinner? We've got you covered.</p>
+            </div>
+        </header>
+        <div class="wrapper tagSection">
+            <form action="GET" id="ingredients">
+                <h2>What are we eating?</h2>
+                <div class="meats">
+                    <input type="radio" name="ingredient" value="chicken" id="chicken" checked="true">
+                    <label for="chicken">Chicken</label>
+                    
+                    <input type="radio" name="ingredient" value="turkey" id="turkey">
+                    <label for="turkey">Turkey</label>
+    
+                    <input type="radio" name="ingredient" value="beef" id="beef">
+                    <label for="beef">Beef</label>
+                    
+                    <input type="radio" name="ingredient" value="pork" id="pork">
+                    <label for="pork">Pork</label>
+        
+                    <input type="radio" name="ingredient" value="lamb" id="lamb">
+                    <label for="lamb">Lamb</label>
+        
+                    <input type="radio" name="ingredient" value="veal" id="veal">
+                    <label for="veal">Veal</label>
+        
+                    <input type="radio" name="ingredient" value="fish" id="fish">
+                    <label for="fish">Fish</label>
+                    
+                    <input type="radio" name="ingredient" value="shellfish" id="shellfish">
+                    <label for="shellfish">Shellfish</label>
+                </div>
+                <h2>Or</h2>
+                <div class="veg">    
+                    <input type="radio" name="ingredient" value="vegetarian" id="vegetarian">
+                    <label for="vegetarian">Vegetarian</label>
+                    
+                    <input type="radio" name="ingredient" value="vegan" id="vegan">
+                    <label for="vegan">Vegan</label>
+                    <button class="submit">Submit</button>             
+                </div>
+            </form>
+        </div>
+    </div>
+    <section class="foodAndWine wrapper">
+        <div class="recipe">
+            <a href="">
+                <h2>Recipe Title</h2>
+                <div class="imageHolder">
+                    <img src="http://unsplash.it/300/300/" alt="">
+                </div>
+            </a>
+            <h3 class="totalTime"></h3>
+            <h3 class="servings"></h3>
+            <div class="ingredients">
+                <h3>Ingredients:</h3>
+                <ul class="ingredients">
+                </ul>
+            </div>
+            <div class="recipeCredit">
+                <a href="">
+                    <p></p>
+                    <img src="" alt="" class="logo">
+                </a>
+            </div>
+            <p class=""></p>
+            <p class="sourceURL"></p>
+        </div>
+        <div class="wine">
+            <a href="">
+                <h2>Wine Heading</h2>
+                <div class="imageHolder">
+                    <img src="http://unsplash.it/300/300/" alt="">
+                </div>
+            </a>
+            <p></p>
+            <button class="differentRecipe">Try Again!</button>
+            <button class="backToTop">Back to top</button>
+        </div>
+    </section>
+
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="scripts.js"></script>
+
+</body>
+</html>

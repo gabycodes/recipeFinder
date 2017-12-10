@@ -1,0 +1,31 @@
+header {
+    color: pink;
+    letter-spacing: 1px;
+    img {
+        width: 80px;
+        float: left;
+        position: relative;
+        top: 28px;
+    }
+    h1 {
+        float: right;
+        width: calc(97% - 70px);
+    }
+    p {
+        text-align: left;
+        font-size: 2rem;
+        margin-top: 0;
+        float: right;
+        width: calc(97% - 70px);
+    }
+    .wrapper {
+        border: 2px solid rgb(167, 38, 60);
+        padding: 15px 30px;
+        // margin-top: 20px;
+    }
+    .title {
+        // margin-top: 15px;
+        position: relative;
+        top: 15px;
+    }
+}

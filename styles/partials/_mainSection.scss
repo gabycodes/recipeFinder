@@ -1,0 +1,85 @@
+.foodAndWine {
+    display: none;
+    border: 2px solid #a7263c;
+    padding: 22px 22px;
+    padding: 20px;
+    margin-bottom: 15px;
+    h2 {
+        color: rgb(31, 31, 31);
+        text-decoration: none;
+    }
+    img {
+        border-radius: 4px;  
+    }
+}
+a {
+    text-decoration: none;
+}
+a p {
+    width: 100%;
+    float: right;
+    font-size: 1.4rem;
+    text-align: right;
+    color: rgb(136, 22, 45);
+    margin-top: 25px;
+}
+img.logo {
+    width: 80px;
+    float: right;
+    position: relative;
+    left: 16px;
+}
+.recipe ul {
+    color: black;
+    list-style-type: circle;
+    padding: 0;
+}
+.recipe li {
+    display: block;
+    font-family: "Raleway", sans-serif;
+    list-style-type: circle;
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+.cookTime, .totalTime, .servings {
+    font-size: 2rem;
+    font-family: "Abril Fatface", cursive;
+    font-weight: bolder;
+}
+.recipe, .wine {
+    padding: 30px;
+    border-radius: 3px;
+    width: 50%;
+    background: rgb(255, 255, 255);
+    margin: 2px;
+}
+.recipe {
+    width: 62%;
+}
+.wine {
+    width: 35%;
+    max-height: 730px;
+    position: relative;
+    p {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+}
+.differentRecipe, .backToTop {
+    font-family: "Raleway", sans-serif;
+    font-size: 2rem;
+    color: white;
+    letter-spacing: 1px;
+    background: #88162d;
+    padding: 12px;
+    width: 100%;
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+.backToTop {
+    bottom: -155px;
+}
+

@@ -1,0 +1,41 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Abril Fatface", cursive;
+    background: black;
+    background: url(../assets/wild-sea.png);
+}
+p, label {
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+}
+
+h1 {
+    letter-spacing: 3px;
+    color: white;
+    font-size: 5rem;
+    margin-bottom: 0;
+    margin-top: 13px;
+}
+h2 {
+    color: white;
+    font-size: 3rem;
+    letter-spacing: 3px;
+}
+h3 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+img {
+    display: block;
+    width: 100%;
+}
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.landing {
+    height: 100vh;
+}

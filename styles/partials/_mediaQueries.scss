@@ -1,0 +1,89 @@
+@media (max-width: 1300px) {
+    .foodAndWine h2 {
+        text-align: center;
+    }
+    .tagSection {
+        top: 60vh;
+    }
+    .tagSection label {
+        padding: 7px 12px;
+    }
+    .foodAndWine img:not(.logo){
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 1000px) {
+    h1 {
+        font-size: 5rem;
+    }
+    .recipe h3 {
+        font-size: 2vw;
+    }
+    header p {
+        font-size: 2vw;
+    }
+
+}
+
+@media (max-width: 800px) {
+    .foodAndWine {
+        flex-direction: column;
+    }
+    .recipe, .wine {
+        width: 100%;
+        h2 {
+            text-align: center;
+        }
+        h3 {
+            font-size: 1.5rem;
+        }
+    }
+    .wine {
+        margin-top: 20px;
+    }
+    .wine img {
+        width: 40%;
+        margin: 0 auto;
+    }
+    header p {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width:650px) {
+    header img {
+        top: 24px;
+    }
+    h1 {
+        font-size: 7.6vw;
+    }
+    h2 {
+        font-size: 2.5rem;;
+    }
+    .tagSection label {
+        font-size: 1.8rem;
+    }
+    .tagSection label, .tagSection .submit {
+        width: 49.5%;
+    }
+    .tagSection .submit {
+        width: 100%;
+        margin-top: 17px;
+    }
+    .tagSection .veg {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .tagSection .veg label {
+        margin-right: 0;
+        width: 49.5%;
+    }
+}
+
+@media (max-width:480px) {
+    header p, header h1 {
+        width: calc(95% - 70px);
+    }
+}

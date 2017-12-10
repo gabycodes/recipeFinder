@@ -1,0 +1,68 @@
+.tagSection {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 50vh;
+    transform: translate(-50%,-50%);
+    padding: 30px;
+    p {
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+    label, .submit {
+        color: white;
+        font-size: 2rem;
+        letter-spacing: 1px;
+        border-radius: 2px;
+        background: rgb(136, 22, 45);
+        padding: 12px;
+        width: 24.25%;
+        margin-bottom: 1%;
+        display: inline-block;
+    }
+    .submit {
+        border: none;
+        font-size: 2.4rem;
+        color: rgb(26, 26, 26);
+        padding: 5px;
+        background: white;
+        float: right;
+    }
+    label:hover, label:focus, label:active {
+        background: rgb(167, 38, 60);
+    }
+    #ingredients input[type="radio"]:checked+label {
+        background-color: rgb(184, 51, 75);
+    }
+    input {
+        visibility: hidden;
+        position: absolute;
+    }
+    .meats {
+        display: flex;
+        flex-wrap: wrap;        
+        justify-content: space-between;
+    }
+    .veg label {
+        margin-right: 0.8%;
+    }
+
+    ///////////////////////////
+    .radio-toolbar input[type="radio"] {
+        display: none;
+      }
+      
+      .radio-toolbar label {
+        display: inline-block;
+        background-color: #ddd;
+        padding: 4px 11px;
+        font-family: Arial;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      
+      .radio-toolbar input[type="radio"]:checked+label {
+        background-color: #bbb;
+      }
+
+}
