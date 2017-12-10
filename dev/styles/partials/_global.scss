@@ -4,24 +4,40 @@ html {
 
 body {
     font-family: "Abril Fatface", cursive;
-    // background: black;
-    background: url(../assets/lukas-blazek-261682.jpg);
-    background-size: cover;
 }
-p, label {
+p, label, button {
     text-align: center;
-    font-family: "Raleway", sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
-
-h1 {
-    letter-spacing: 3px;
+p {
+    font-size: 3rem;
+    margin: 0;
+}
+button {
+    font-size: 2.5rem;
     color: white;
-    font-size: 5rem;
-    margin-bottom: 0;
-    margin-top: 13px;
+    padding: 15px 20px ;
+    border-radius: 4px;
+    border: none;
+    background: #00a000;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+h1 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    // font-weight: 300;
+    font-size: 7rem;
+    letter-spacing: 3px;
+    color: rgb(255, 72, 0);
+    text-shadow: 0px 0px 10px rgba(255,255,255,0.6);
+    margin-bottom: 10px;
+    margin-top: 0;
 }
 h2 {
-    color: white;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 72, 0);
     font-size: 3rem;
     letter-spacing: 3px;
 }

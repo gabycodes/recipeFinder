@@ -5,61 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Arima+Madurai|Forum|Limelight|Pompiere|Yeseva+One|Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400|Open+Sans" rel="stylesheet">
+    <script src="https://use.fontawesome.com/9dd6041014.js"></script>
     <link rel="stylesheet" href="public/styles/style.css">
 </head>
 <body>
     <div class="splashPage">
-        <h1>RecipeFinder</h1>
-        <p>Not sure what you're having for dinner?</p>
-        <p>Let us help.</p>
-        <button>Get Started</button>
+        <div class="content">
+            <h1>RecipeFinder</h1>
+            <p>Not sure what to cook for dinner?</p>
+            <p>Let us help.</p>
+            <button class="enterSite">Get Started</button>
+        </div>
     </div>
     <div class="landing">
-        <header>
+        <!-- <header>
             <div class="title wrapper clearfix">
                 <img src="assets/logo.png" alt="">
                 <h1>DinnerDatePro</h1>
                 <p>No ideas for dinner? We've got you covered.</p>
             </div>
-        </header>
-        <div class="wrapper tagSection">
-            <form action="GET" id="ingredients">
+        </header> -->
+        <div class="tagSection">
+            <form action="GET" id="ingredients" class="clearfix">
                 <h2>What are we eating?</h2>
-                <div class="meats">
-                    <input type="radio" name="ingredient" value="chicken" id="chicken" checked="true">
-                    <label for="chicken">Chicken</label>
-                    
-                    <input type="radio" name="ingredient" value="turkey" id="turkey">
-                    <label for="turkey">Turkey</label>
-    
-                    <input type="radio" name="ingredient" value="beef" id="beef">
-                    <label for="beef">Beef</label>
-                    
-                    <input type="radio" name="ingredient" value="pork" id="pork">
-                    <label for="pork">Pork</label>
+                <div class="flexParent">
+                    <div class="meats">
+                        <input type="radio" name="ingredient" value="chicken" id="chicken" checked="true">
+                        <label for="chicken">Chicken</label>
+                        
+                        <input type="radio" name="ingredient" value="turkey" id="turkey">
+                        <label for="turkey">Turkey</label>
         
-                    <input type="radio" name="ingredient" value="lamb" id="lamb">
-                    <label for="lamb">Lamb</label>
-        
-                    <input type="radio" name="ingredient" value="veal" id="veal">
-                    <label for="veal">Veal</label>
-        
-                    <input type="radio" name="ingredient" value="fish" id="fish">
-                    <label for="fish">Fish</label>
-                    
-                    <input type="radio" name="ingredient" value="shellfish" id="shellfish">
-                    <label for="shellfish">Shellfish</label>
+                        <input type="radio" name="ingredient" value="beef" id="beef">
+                        <label for="beef">Beef</label>
+                        
+                        <input type="radio" name="ingredient" value="pork" id="pork">
+                        <label for="pork">Pork</label>
+            
+                        <input type="radio" name="ingredient" value="lamb" id="lamb">
+                        <label for="lamb">Lamb</label>
+            
+                        <input type="radio" name="ingredient" value="veal" id="veal">
+                        <label for="veal">Veal</label>
+            
+                        <input type="radio" name="ingredient" value="fish" id="fish">
+                        <label for="fish">Fish</label>
+                        
+                        <input type="radio" name="ingredient" value="shellfish" id="shellfish">
+                        <label for="shellfish">Shellfish</label>
+                    </div>
+                    <div class="veg">    
+                        <input type="radio" name="ingredient" value="vegetarian" id="vegetarian">
+                        <label for="vegetarian">Vegetarian<i class="fa fa-leaf" aria-hidden="true"></i></label>
+                        
+                        <input type="radio" name="ingredient" value="vegan" id="vegan">
+                        <label for="vegan">Vegan<i class="fa fa-leaf" aria-hidden="true"></i></label>            
+                    </div>
                 </div>
-                <h2>Or</h2>
-                <div class="veg">    
-                    <input type="radio" name="ingredient" value="vegetarian" id="vegetarian">
-                    <label for="vegetarian">Vegetarian</label>
-                    
-                    <input type="radio" name="ingredient" value="vegan" id="vegan">
-                    <label for="vegan">Vegan</label>
-                    <button class="submit">Submit</button>             
-                </div>
+                <button class="submit">Find Recipes</button> 
             </form>
         </div>
     </div>
@@ -102,7 +106,7 @@
 
     <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="scripts.js"></script>
+    <script src="dev/scripts/scripts.js"></script>
 
 </body>
 </html>

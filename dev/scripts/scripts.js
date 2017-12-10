@@ -49,6 +49,11 @@ dateNight.eventListener = function() {
         dateNight.pickRecipe();
         dateNight.pickWine();
     });
+    $(".enterSite").on('click', (e) => {
+        e.preventDefault();
+        $(".splashPage").css({"display":"none"});
+        $(".tagSection").css({"display":"block"});
+    });
 };
 
 dateNight.determineYummlyUrl = function(mainIngredient) {

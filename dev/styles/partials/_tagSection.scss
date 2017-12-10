@@ -1,50 +1,115 @@
 .tagSection {
     position: absolute;
-    width: 100%;
-    left: 50%;
-    top: 50vh;
-    transform: translate(-50%,-50%);
+    top: 0;
+    width: 100vw;
+    height: 100vh;
     padding: 30px;
+    display: none;
+    background: url(../assets/lukas-blazek-261682.jpg);
+    background-size: cover;
+
+    h2 {
+        text-shadow: 0px 0px 10px rgba(255,255,255,0.6);
+    }
     p {
         font-size: 2rem;
         margin-top: 10px;
     }
+    form {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    label {
+        width: 16rem;
+    }
     label, .submit {
-        color: white;
+        color: rgb(34, 34, 34);
         font-size: 2rem;
         letter-spacing: 1px;
-        border-radius: 2px;
-        background: rgb(136, 22, 45);
-        padding: 12px;
-        width: 24.25%;
-        margin-bottom: 1%;
-        display: inline-block;
+        border-radius: 4px;
+        background: white;
+        padding: 25px 20px;
+        margin-bottom: 3%;
+        position: relative;
+        top: 0;
+        transition: all 0.1s ease-in-out;
     }
     .submit {
         border: none;
-        font-size: 2.4rem;
-        color: rgb(26, 26, 26);
-        padding: 5px;
-        background: white;
-        float: right;
+        background: #041c2d;
+        color: white;
+        display: block;
+        padding: 15px 40px;
+        margin-top: 20px;  
+    }
+    .submit:hover, .submit:focus, .submit:active {
+        background: #093049;
+        top: -3px;
+        box-shadow: 0px 5px 15px rgba(0,0,0, 0.8);
     }
     label:hover, label:focus, label:active {
-        background: rgb(167, 38, 60);
+        background-color: rgb(252, 110, 74);
+        top: -3px;
+        box-shadow: 0px 5px 15px rgba(0,0,0, 0.8);
+        color: white;
     }
     #ingredients input[type="radio"]:checked+label {
-        background-color: rgb(184, 51, 75);
+        background: rgb(255, 72, 0);
+        color: white;
     }
     input {
         visibility: hidden;
         position: absolute;
     }
+    .flexParent {
+        display: flex;
+    }
+    .meats, .veg {
+        // width: 50%;
+    }
     .meats {
+        width: 50%;
+        flex: 10 0 20rem;
         display: flex;
         flex-wrap: wrap;        
-        justify-content: space-between;
+        justify-content: baseline;
+        position: relative;
+        
+        label:nth-child(2n + 2) {
+            margin-right: 15px;
+        }
     }
-    .veg label {
-        margin-right: 0.8%;
+    .meats::after {
+        content: "";
+        background: white;
+        position: absolute;
+        height: 145px;
+        width: 2px;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+    }
+    .veg {
+        flex: 5.3 2 20rem;
+        padding-top: 13%;
+        position: relative;
+
+        label {
+            background: #00a000;
+            display: block;
+            margin: 0 auto 15px auto;
+            color: white;
+            width: 19rem;
+        }
+        i {
+            margin-left: 4px;
+        }
+        label:hover, label:focus, label:active {
+            background-color: rgb(133, 199, 0);
+            top: -3px;
+            color: white;
+            box-shadow: 0px 5px 15px rgba(0,0,0, 0.8);
+        }
     }
 
     ///////////////////////////
