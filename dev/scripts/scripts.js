@@ -24,35 +24,85 @@ dateNight.init = function() {
 dateNight.eventListener = function() {
     $('.submit').on('click', function (e) {
         e.preventDefault();
-        
-        $('.foodAndWine').css({
-            "display":"flex",
-            "justify-content":"space-between"
-        });
-
-        $('html,body').animate({
-            scrollTop: $(".foodAndWine").offset().top},
-            1200);
+        // $('html,body').animate({
+        //     scrollTop: $(".foodAndWine").offset().top},
+        //     1200);
             
         // grab value from main form element
         const mainIngredient = $("input[name=ingredient]:checked").val();
         dateNight.determineYummlyUrl(mainIngredient);
     });
     $('.backToTop').on('click', function() {
-        $('html,body').animate({
-            scrollTop: $("header").offset().top},
-            1200);
+        // $('html,body').animate({
+        //     scrollTop: $("header").offset().top},
+        //     1200);
     });
-    // we moved this out of the above because it was previously adding a new listener everytime the user tried for a new recipe, even if they changed their selections. If the user asked for a new recipe, then pressed sumbit again, and then tried for new recipes again, the array losing more values than we wanted (more than one was unshifting per "try again")
     $(".differentRecipe").on('click', (e) => {
         e.preventDefault();
         dateNight.pickRecipe();
         dateNight.pickWine();
     });
+    $(".backToTop").on('click', (e) => {
+        e.preventDefault();
+        $(".tagSection").css({
+            "top": "0"
+        });
+        $(".foodAndWine").css({
+            "top": "-115vh"
+        });
+    
+    });
     $(".enterSite").on('click', (e) => {
         e.preventDefault();
         $(".splashPage").css({"display":"none"});
         $(".tagSection").css({"display":"block"});
+    });
+    $(".submit").on('click', (e) => {
+        e.preventDefault();
+        $(".tagSection").css({
+            "top": "-100vh"
+        });
+        $(".foodAndWine").css({
+            "top": "0"
+        });
+    });
+    $(".facade").on('click', (e) => {
+        e.preventDefault();
+        $(".facade").css({
+            "display": "none"
+        });
+        if ($(".facade").css({"display":"none"})) {
+            $(".facade").css({
+                "display": "absolute"
+            });
+        }
+        $(".wine").css({
+            "z-index": "2",
+            "height": "auto"
+        });
+        $(".hideWine").css({
+            "display": "block"
+        });
+        $(".wine .imageHolder").css({
+            "height": "auto"
+        });
+    });
+    $(".hideWine").on('click', (e) => {
+        console.log("hello");
+        e.preventDefault();
+        $(".facade").css({
+            "display": "block"
+        });
+        $(".wine").css({
+            "z-index": "0",
+            "height":"400px"
+        });
+        $(".hideWine").css({
+            "display": "none"
+        });
+        $(".wine .imageHolder").css({
+            "height": "0"
+        });
     });
 };
 
@@ -108,15 +158,23 @@ dateNight.getRecipeDetails = function(array) {
     });
 };
 dateNight.displayRecipe = function(array) {
+    console.log(array);
     $('.recipe a').attr('href', array.attribution.url);
-    $('.recipe h2').html(array.name);
-    $('.recipe img').attr('src',array.images[0].hostedLargeUrl);
+    $('.recipe h2.food').html(array.name);
+    $('.recipe img.food').attr('src',array.images[0].hostedLargeUrl);
     $('.recipe .recipeCredit a').attr('href', array.attribution.url);
     $('.recipe .recipeCredit p').html(array.attribution.text);
     $('.recipe .recipeCredit img').attr('src', array.attribution.logo)
     $('.recipe .cookTime').html(`Cook time: <span class="value">${array.cookTime}</span>`);
     $('.recipe .totalTime').html(`Total time: <span class="value">${array.totalTime}</span>`);
-    $('.recipe .servings').html(`Servings: <span class="value">${array.yield}</span>`);
+    $('.recipe .servings').html(`Servings: <span class="value">${array.numberOfServings}</span>`);
+
+    // if (array.numberOfServings = "") {
+    //     $('.recipe .servings').html(`Servings: <span class="value">${array.numberOfServings}</span>`);
+    // } else {
+    //     $('.recipe .servings').html(`Servings: no info</span>`);
+    // }
+    
 
     $("ul.ingredients li").remove();    
     const ingredients = array.ingredientLines;
@@ -185,7 +243,7 @@ dateNight.pickWine = function (array) {
 
 dateNight.displayWine = function (array) {
     $('.wine h2').html(array.name);
-    $('.wine img').attr('src', array.image_url);
+    $('.wine img.wineImage').attr('src', array.image_url);
     $('.wine p').html(description);
 };
 

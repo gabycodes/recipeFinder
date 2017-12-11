@@ -1,15 +1,17 @@
 .foodAndWine {
-    display: none;
-    border: 2px solid #a7263c;
     padding: 22px 22px;
     padding: 20px;
-    margin-bottom: 15px;
+    position: relative;
+    height: 100vh;
+    top: 100vh;
+    transition: top 1s ease-in;
+
     h2 {
         color: rgb(31, 31, 31);
         text-decoration: none;
-    }
-    img {
-        border-radius: 4px;  
+        clear: both;
+        text-align: center;
+        font-size: 2.5rem;
     }
 }
 a {
@@ -20,8 +22,9 @@ a p {
     float: right;
     font-size: 1.4rem;
     text-align: right;
-    color: rgb(136, 22, 45);
+    color: rgb(31, 31, 31);
     margin-top: 25px;
+    text-align: center;
 }
 img.logo {
     width: 80px;
@@ -48,38 +51,163 @@ img.logo {
 }
 .recipe, .wine {
     padding: 30px;
-    border-radius: 3px;
+    border-radius: 4px;
     width: 50%;
     background: rgb(255, 255, 255);
     margin: 2px;
 }
 .recipe {
-    width: 62%;
+    width: 520px;
+    margin: 0 auto;
+    box-shadow: 0px 10px 40px rgba(0,0,0,1);
+    position: relative;
+    z-index: 1;
+    position: relative;
+}
+.recipe .imageHolder {
+    height: 47vh;
+    overflow: hidden;
+    border-radius: 4px;
+    margin: 0 0 10px 0;
+    transition: margin 0.5s ease-in-out;
+}
+.recipe img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.recipeFeature {
+    display: block;
+    border: 2px solid transparent;
+    margin: 0 0 5px 0;
+    transition: border 0.5s ease-in-out;
+}
+.recipeFeature:hover, .recipeFeature:focus, .recipeFeature:active {
+    border: 2px solid rgb(75, 255, 75);
+
+    .imageHolder {
+        margin: 10px;
+    }
+}
+.recipeDetails {
+    span {
+        font-family: 'Montserrat', sans-serif;
+        margin-left: 6px;
+    }
+    div {
+        display: inline-block;
+        float: left;
+    }
+    div:first-of-type {
+        margin-right: 20px;
+    }
+    div:last-of-type {
+        margin-bottom: 10px;
+    }
+    i {
+        font-size: 2rem;
+    }
+    div:last-of-type i {
+        margin: 0 0.2rem;
+    }
+}
+.buttons {
+
+    .differentRecipe, .backToTop {
+        font-size: 2rem;   
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.6rem;
+        color: white;
+        border-radius: 4px;
+        margin: 0;
+        width: calc(50% - 5px);
+        float: left;
+    }
+    .differentRecipe {
+        margin-right: 10px;
+    }
+}
+button {
+    position: relative;
+    top: 0;
+    transition: top 0.2s ease-in;
+}
+button:hover, button:focus, button:active {
+    background: #38b100;
+    top: -3px;
+    box-shadow: 0px 5px 15px rgba(0,0,0, 0.8);
+}
+.hidden {
+    display: none;
 }
 .wine {
-    width: 35%;
-    max-height: 730px;
-    position: relative;
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    top: 60px;
+    left: calc(50% + 17px);
+    margin: 0;
+    border-radius: 4px;
+    box-shadow: 0px 10px 40px rgba(0,0,0,1);
+    transition: left 0.3s ease-in;
+
+    h2 {
+        font-size: 2rem;
+    }
+    img {
+        z-index: 2;
+        width: 100%;
+        position: static;
+        height: 100%;
+        margin: 0 auto;
+        box-shadow: none;
+    }
+    a.hideWine {
+        display: none;
+    }
+    i {
+        font-size: 4rem;
+        color: grey;
+        position: absolute;
+        top: 2px;
+        right: 7px;
+        z-index: 5;
+    }
     p {
         font-size: 1.5rem;
         line-height: 2.5rem;
     }
-}
-.differentRecipe, .backToTop {
-    font-family: "Raleway", sans-serif;
-    font-size: 2rem;
-    color: white;
-    letter-spacing: 1px;
-    background: #88162d;
-    padding: 12px;
-    width: 100%;
-    position: absolute;
-    bottom: -80px;
-    left: 0;
-    border: 1px solid black;
-    border-radius: 4px;
-}
-.backToTop {
-    bottom: -155px;
+    .imageHolder {
+        width: 184px;
+        margin: 0 auto;
+        overflow: hidden;
+        height: 0;
+    }
+    .facade {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 300px;
+        height: 100%;
+        background: rgb(109, 0, 36);
+        border-radius: 4px;
+        transition: right 0.3s ease-in,
+                    background 0.3s ease-in;
+    }
+    .facade:hover, .facade:focus, .facade:active {
+        right: -15px;
+        background: rgb(136, 0, 45);
+    }
+    .facade:hover .wine, .facade:focus .wine, .facade:active .wine {
+        right: -15px;
+    }
+    .facade img {
+        display: inline-block;
+        width: 25px;
+        height: 50px;
+        position: absolute;
+        right: 15px;
+        top: 21px;
+    }
 }
 

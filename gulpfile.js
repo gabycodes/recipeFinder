@@ -18,7 +18,7 @@ gulp.task('styles', function () {
 });
 
 gulp.task('scripts', () => {
-    gulp.src('./dev/scripts/main.js')
+    gulp.src('./dev/scripts/scripts.js')
         .pipe(babel({
             presets: ['env']
         }))

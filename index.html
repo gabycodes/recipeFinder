@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="shortcut icon" href="public/assets/noun_178304_cc.png" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400|Open+Sans" rel="stylesheet">
     <script src="https://use.fontawesome.com/9dd6041014.js"></script>
     <link rel="stylesheet" href="public/styles/style.css">
@@ -27,8 +28,8 @@
             </div>
         </header> -->
         <div class="tagSection">
-            <form action="GET" id="ingredients" class="clearfix">
-                <h2>What are we eating?</h2>
+            <form action="GET" id="ingredients" class="clearfix form">
+                <h2>What are you in the mood for?</h2>
                 <div class="flexParent">
                     <div class="meats">
                         <input type="radio" name="ingredient" value="chicken" id="chicken" checked="true">
@@ -63,46 +64,56 @@
                         <label for="vegan">Vegan<i class="fa fa-leaf" aria-hidden="true"></i></label>            
                     </div>
                 </div>
-                <button class="submit">Find Recipes</button> 
+                <button class="submit">Find Recipes</button>
             </form>
         </div>
-    </div>
-    <section class="foodAndWine wrapper">
-        <div class="recipe">
-            <a href="">
-                <h2>Recipe Title</h2>
-                <div class="imageHolder">
-                    <img src="http://unsplash.it/300/300/" alt="">
-                </div>
-            </a>
-            <h3 class="totalTime"></h3>
-            <h3 class="servings"></h3>
-            <div class="ingredients">
-                <h3>Ingredients:</h3>
-                <ul class="ingredients">
-                </ul>
-            </div>
-            <div class="recipeCredit">
-                <a href="">
-                    <p></p>
-                    <img src="" alt="" class="logo">
+        <section class="foodAndWine wrapper">
+            <div class="recipe">
+                <a href="" class="recipeFeature" target="_blank">
+                    <h2 class="food">Recipe Title</h2>
+                    <div class="imageHolder">
+                        <img src="http://unsplash.it/300/300/" alt="" class="food">
+                    </div>
                 </a>
-            </div>
-            <p class=""></p>
-            <p class="sourceURL"></p>
-        </div>
-        <div class="wine">
-            <a href="">
-                <h2>Wine Heading</h2>
-                <div class="imageHolder">
-                    <img src="http://unsplash.it/300/300/" alt="">
+                <div class="recipeCredit">
+                    <!-- <a href="">
+                        <p></p>
+                        <img src="" alt="" class="logo">
+                    </a> -->
                 </div>
-            </a>
-            <p></p>
-            <button class="differentRecipe">Try Again!</button>
-            <button class="backToTop">Back to top</button>
-        </div>
-    </section>
+                <div class="recipeDetails">
+                    <div>
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        <span class="totalTime"></span>
+                    </div>
+                    <div>
+                        <i class="fa fa-male" aria-hidden="true"></i>
+                        <span class="servings"></span>
+                    </div>
+                </div>
+                <div class="buttons clearfix">
+                    <button class="differentRecipe">Show me another recipe</button>
+                    <button class="backToTop">Change ingredient</button>
+                </div>
+            </div>
+            <div class="wine">
+                <a href="#" class="hideWine">
+                    <i class="fa fa-times" aria-hidden="true" class="">
+                    </i>
+                </a>
+                <a href="#" class="facade">
+                    <img src="public/assets/noun_866144_cc.png" alt="">
+                </a>
+                <div>
+                    <h2>Wine Heading</h2>
+                    <div class="imageHolder">
+                        <img src="http://unsplash.it/300/300/" alt="" class="wineImage">
+                    </div>
+                    <p></p>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>

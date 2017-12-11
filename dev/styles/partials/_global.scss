@@ -54,5 +54,9 @@ img {
     margin: 0 auto;
 }
 .landing {
-    height: 100vh;
+    min-height: 100vh;
+    max-height: 110vh;
+    background: url(../assets/lukas-blazek-261682.jpg);
+    background-size: cover;
+    overflow: hidden;
 }
