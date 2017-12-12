@@ -191,34 +191,34 @@ dateNight.getWine = function(mainIngredient) {
 
     if (ingredient === "chicken") {
         keywords = "chardonnay+white+wine";
-        description = "Pair this recipe with a crisp Chardonnay.";
+        description = "Pair this with a crisp Chardonnay.";
     } if (ingredient === "turkey") {
         keywords = "chardonnay+white+wine";
-        description = "Pair this recipe with a crisp Chardonnay.";
+        description = "Pair this with a crisp Chardonnay.";
     } else if ( ingredient === "beef") {
         keywords = "red+wine+noir";
-        description = "Pair this recipe with a light to medium-bodied Pinot Noir.";
+        description = "Pair recipe with a light to medium-bodied Pinot Noir.";
     } else if ( ingredient === "pork") {
         keywords = "pinot+grigio+wine";
         description = "This recipe pairs well with a zesty Pinot Grigio.";
     } else if ( ingredient === "lamb") {
         keywords = "wine+cabernet+merlot";
-        description = "Pair this recipe with a lush, full-bodied wine like Merlot or Cabernet Sauvignon.";
+        description = "Pair this with a lush, full-bodied wine like Merlot or Cabernet Sauvignon.";
     } else if ( ingredient === "veal") {
         keywords = "wine+chianti";
-        description = "This recipe paris well with a fruity and acidic Chianti.";        
+        description = "This recipe pairs well with a fruity and acidic Chianti.";        
     } else if ( ingredient === "fish") {
         keywords = "wine+sauvignon+blanc";
-        description = "A fresh and floral Sauvignon Blanc will pair nicely with this recipe."
+        description = "Pair with a fresh and floral Sauvignon Blanc."
     } else if (ingredient === "shellfish") {
         keywords = "wine+chardonnay";
-        description = "Pair this recipe with a crisp Chardonnay."
+        description = "Pair with a crisp Chardonnay."
     } else if (ingredient === "vegetarian") {
         keywords = "wine+red+noir";
-        description = "Pair this recipe with a light to medium-bodied Pinot Noir.";
+        description = "Pair with a light to medium-bodied Pinot Noir.";
     } else if (ingredient === "vegan") {
         keywords = "wine+zinfandel";
-        description = "Pair this recipe with a bold and full-bodied Zinfandel.";
+        description = "Pair with a bold and full-bodied Zinfandel.";
     }
     
     $.ajax({
@@ -242,9 +242,9 @@ dateNight.pickWine = function (array) {
 };
 
 dateNight.displayWine = function (array) {
-    $('.wine h2').html(array.name);
+    $('.wine p').html(array.name);
     $('.wine img.wineImage').attr('src', array.image_url);
-    $('.wine p').html(description);
+    $('.wine h2').html(description);
 };
 
 

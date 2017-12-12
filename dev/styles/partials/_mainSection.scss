@@ -208,6 +208,8 @@ button:hover, button:focus, button:active {
         position: absolute;
         right: 15px;
         top: 21px;
+        transition: width 1s ease-in,
+                    height 1s ease-in;
     }
 }
 

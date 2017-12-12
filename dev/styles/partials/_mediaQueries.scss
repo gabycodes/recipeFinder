@@ -1,3 +1,167 @@
+@media (max-width: 760px) {
+    .tagSection {
+        .meats::after {
+            height: 0;
+        }
+    }
+    .foodAndWine {
+        .recipe {
+            width: 68.5vw;
+        }
+    }
+
+}
+@media (max-width: 700px) {
+    .splashPage {
+        background-position-x: right;
+
+        h1 {
+            font-size: 10vw;
+        }
+        p {
+            font-size: 4.3vw;
+        }
+        button {
+            font-size: 3.6vw;
+        }
+    }
+    .tagSection {
+        .flexParent {
+            flex-direction: column;
+            height: 300px;
+        }
+        .meats, .veg {
+            width: 100%;
+        }
+        label, .submit {
+            font-size: 2.9vw;
+            height: fit-content;
+        }
+        .meats label {
+            width: 23%;
+            margin-right: 2.3vw;
+            padding: 25px 4vw;
+        }
+        .meats label:nth-child(2n + 2) {
+            margin-right: 2.3vw;
+        }
+        .meats label:nth-of-type(4n + 4) {
+            margin-right: 0;
+        }
+        .veg {
+            display: flex;
+            padding-top: 10px;
+        }
+        .veg label {
+            display: inline;
+            width: calc(50% - 7.5px);
+            height: fit-content;
+        }
+        .veg label:first-of-type {
+            margin-right: 15px;
+        }
+    }
+    .foodAndWine {
+        .recipe h2 {
+            font-size: 3.6vw;
+        }
+        .recipeDetails {
+            margin-bottom: 5px;
+        }
+        .servings, .totalTime {
+            font-size: 2.8vw;
+        }
+        i:not(".hideWine i") {
+            font-size: 3vw;
+        }
+        .wine {
+            left: auto;
+            right: 6vw;
+        }
+        .wine .imageHolder {
+            height: auto;
+            max-width: 65%;
+        }
+        .recipe .imageHolder {
+            max-height: 35vw;
+            margin-bottom: 10px;
+        }
+        .recipe img {
+            position: static;
+            transform: translateY(0%);
+            top: 0;
+        }
+        .recipe button {
+            clear: both;
+            display: block;
+            width: 100%;
+            margin: 0;
+        }
+        .recipe button:first-of-type {
+            margin-bottom: 7px;
+        }
+    }
+}
+@media (max-width: 500px) {
+    .splashPage {
+        background-position-x: right;
+
+        h1 {
+            font-size: 10vw;
+        }
+        p {
+            margin: 0 auto;
+            max-width: 70%;
+            font-size: 2.15rem;
+        }
+        button {
+            font-size: 1.8rem;
+        }
+    }
+    .tagSection {
+        label {
+            padding: 10px 4vw;
+        }
+        label, .submit {
+            font-size: 1.4rem;
+        }
+        .meats label {
+            width: calc(50% - 7.5px);
+            padding: 10px 4vw;
+        }
+        .meats label:nth-child(4n + 4) {
+            margin-right: 0;
+        }
+        .meats label:nth-child(4n + 2) {
+            margin-right: 15px;
+        }
+    }
+    .foodAndWine {
+        .wine, .facade {
+            width: 65vw;
+        }
+        .facade img {
+            width: 20px;
+            height: 40px;
+        }
+    }
+}
+@media (max-width: 450px) {
+    .splashPage {
+        p {
+            display: none;
+        }
+    }
+    .foodAndWine {
+        .recipe h2 {
+            font-size: 1.6rem;
+        }
+        .servings, .totalTime {
+            font-size: 1.25rem;
+        }
+    }
+}
+
 // @media (max-width: 1300px) {
 //     .foodAndWine h2 {
 //         text-align: center;
