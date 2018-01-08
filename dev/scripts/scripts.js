@@ -5,17 +5,7 @@ dateNight.lcboKey = "MDo1OWQ2NDhjYy1jOThhLTExZTctOGU0NS1jYmRlNTZjZTFhMjE6bjFrWlM
 
 $(function() {
     dateNight.init();
-    // dateNight.responsive();
 });
-
-// I know I'm not supposed to leave code in here but... I want to ome back to this! :)
-// dateNight.responsive = function() {
-//     if ($(window).width() < 960) {
-//         $('.wine button').insertBefore($('.wine button').parent());
-//      } else if ($(window).width() < 960) {
-//         $('.wine button').insertAfter($('.wine button').parent());
-//      }
-// }
 
 dateNight.init = function() {
     dateNight.eventListener();
@@ -24,18 +14,8 @@ dateNight.init = function() {
 dateNight.eventListener = function() {
     $('.submit').on('click', function (e) {
         e.preventDefault();
-        // $('html,body').animate({
-        //     scrollTop: $(".foodAndWine").offset().top},
-        //     1200);
-            
-        // grab value from main form element
         const mainIngredient = $("input[name=ingredient]:checked").val();
         dateNight.determineYummlyUrl(mainIngredient);
-    });
-    $('.backToTop').on('click', function() {
-        // $('html,body').animate({
-        //     scrollTop: $("header").offset().top},
-        //     1200);
     });
     $(".differentRecipe").on('click', (e) => {
         e.preventDefault();
@@ -50,7 +30,6 @@ dateNight.eventListener = function() {
         $(".foodAndWine").css({
             "top": "-115vh"
         });
-    
     });
     $(".enterSite").on('click', (e) => {
         e.preventDefault();
@@ -88,7 +67,6 @@ dateNight.eventListener = function() {
         });
     });
     $(".hideWine").on('click', (e) => {
-        console.log("hello");
         e.preventDefault();
         $(".facade").css({
             "display": "block"
@@ -106,9 +84,8 @@ dateNight.eventListener = function() {
     });
 };
 
+// Determine which url to use for yummly api call
 dateNight.determineYummlyUrl = function(mainIngredient) {
-    let activeUrl;
-    // if diet is meat, set the basic url. If it's not meat, set the other url
     if (mainIngredient === "vegan" || mainIngredient === "vegetarian") {
         activeUrl = `http://api.yummly.com/v1/api/recipes?_app_id=${dateNight.yummlyID}&_app_key=${dateNight.yummlyKey}&q=${mainIngredient}&allowedCourse[]=course^course-Main+Dishes&maxResult=25`;
     } else {
@@ -118,8 +95,9 @@ dateNight.determineYummlyUrl = function(mainIngredient) {
     dateNight.getWine(mainIngredient);
 };
 
+// Find recipes based on chosen main ingredient/diet
 dateNight.findRecipes = function(url) {
-    activeUrl = url;
+    let activeUrl = url;
     $.ajax({
         url: activeUrl,
         method: "GET",
@@ -144,7 +122,6 @@ dateNight.getRecipeDetails = function(array) {
     const recipeId = array;
     $.ajax({
         url: `http://api.yummly.com/v1/api/recipe/${recipeId}?_app_id=${dateNight.yummlyID}&_app_key=${dateNight.yummlyKey}`,
-        // &maxResult=1 & start=${dateNight.randomRecipeNumber }
         method: "GET",
         dataType: "jsonp",
         headers: {
@@ -158,7 +135,6 @@ dateNight.getRecipeDetails = function(array) {
     });
 };
 dateNight.displayRecipe = function(array) {
-    console.log(array);
     $('.recipe a').attr('href', array.attribution.url);
     $('.recipe h2.food').html(array.name);
     $('.recipe img.food').attr('src',array.images[0].hostedLargeUrl);
@@ -168,13 +144,6 @@ dateNight.displayRecipe = function(array) {
     $('.recipe .cookTime').html(`Cook time: <span class="value">${array.cookTime}</span>`);
     $('.recipe .totalTime').html(`Total time: <span class="value">${array.totalTime}</span>`);
     $('.recipe .servings').html(`Servings: <span class="value">${array.numberOfServings}</span>`);
-
-    // if (array.numberOfServings = "") {
-    //     $('.recipe .servings').html(`Servings: <span class="value">${array.numberOfServings}</span>`);
-    // } else {
-    //     $('.recipe .servings').html(`Servings: no info</span>`);
-    // }
-    
 
     $("ul.ingredients li").remove();    
     const ingredients = array.ingredientLines;
@@ -246,22 +215,3 @@ dateNight.displayWine = function (array) {
     $('.wine img.wineImage').attr('src', array.image_url);
     $('.wine h2').html(description);
 };
-
-
-// Find Recipes
-
-// Listen for user click on one or more different tags for the ingredients (chicken, beef, pork, fish, shellfish, veal, lamb, vegetarian, vegan, gluten - free)
-// Listen for user submit
-// Remove recipes without those tags from selections from the api
-// Return a random recipe from the remaining choices
-// Display the recipe on the DOM
-// Listen for user click on a button that returns a new random recipe based on the same choices
-
-// Determine Wine Selection
-
-// Have only some types of wine pair with certain recipe main ingredients (maybe an array for each main ingredient that says what it pairs with?)
-// Get main ingredient information (somehow) from the recipe
-// Based on recipe main ingredient, remove wines that don’t pair well from possible choices
-// Make list of three specific wine selections from lcbo
-// Display category of wine on the DOM
-// Display the three wine suggestions on t
